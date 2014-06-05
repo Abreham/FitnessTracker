@@ -10,8 +10,10 @@
 <title>Add Minute</title>
 </head>
 <body>
-	<h1>Add minutes Exercised</h1>
+	<h1><spring:message code="minute.exercised.head"/></h1>
 
+
+    Language : <a href="?language=en">English</a> | <a href="?language=es">Spanish</a>
 	<form:form commandName="exercise">
 		<table>
 			<tr>
@@ -20,11 +22,11 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-				    <input type="submit" value="Enter Exercise" />
+				    <input type="submit" value="<spring:message code="enter"/>"/>
 				</td>
 			</tr>
 		</table>
 	</form:form>
-
+<h1>Our Goal for the day is : ${goal.minutes}</h1>
 </body>
 </html>

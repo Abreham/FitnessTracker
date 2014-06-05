@@ -11,6 +11,7 @@
 	  		<spring.version>4.0.5.RELEASE</spring.version>
 	  		<servlet.version>2.5</servlet.version>
 	  		<jstl.version>1.2</jstl.version>
+	  		<validator.version>4.2.0.Final</validator.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,6 +41,11 @@
 			<artifactId>servlet-api</artifactId>
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		 <groupId>org.hibernate</groupId>
+		 <artifactId>hibernate-validator</artifactId>
+		 <version>${validator.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
