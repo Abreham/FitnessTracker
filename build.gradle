@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+
+
+repositories {
+  mavenCentral()
+}
+
+war {
+  archiveName = 'FitnesstrackerGradle.war'
+
+}
+
+task deployeToTomcat(type: Copy,dependsOn: 'war') {
+  from 'build/libs/FitnesstrackerGradle.war'
+  into '../tomcat/webapps/'
+}
+
+
+dependencies {
+  compile (
+           ['org.springframework:spring-webmvc:3.1.1.RELEASE'],	
+	       ['org.hibernate:hibernate-validator:4.2.0.Final'],
+	       ['javax.validation:validation-api:1.0.0.GA'],
+	       ['junit:junit:3.8.1'],
+	       ['javax.servlet:servlet-api:2.5'],
+	       ['javax.servlet:jstl:1.2']  
+          )
+          
+  runtime (
+           ['org.springframework.webflow:spring-webflow:2.3.2.RELEASE'],
+	       ['javax.servlet:jstl:1.2']  
+          )
+}
+
+defaultTasks 'clean','deployeToTomcat'
