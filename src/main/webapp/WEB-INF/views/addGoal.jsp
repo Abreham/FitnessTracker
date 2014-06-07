@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -8,19 +9,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add Goal</title>
-<style>
-  .error {
-        color:#ff0000;
-  }
-  .errorblock{
-        color: #000;
-        background-color:#ffEEEE;
-        boarder: 3px solid #ff0000;
-        padding: 8px;
-        marigin: 16px;
-  }
-</style>
-
+   <link href="<c:url value="/stylesheets/style.css" />" rel="stylesheet">
+   <script src="<c:url value="/js/main.js" />"></script>
 </head>
 <body>
   <form:form commandName="goal">
