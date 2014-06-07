@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
@@ -8,7 +9,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add Minute</title>
+   <script src="<c:url value="/js/jquery-2.1.1.js" />"></script>
+   <script src="<c:url value="/js/main.js" />"></script>
 </head>
+
 <body>
 	<h1><spring:message code="minute.exercised.head"/></h1>
 
@@ -19,9 +23,12 @@
 			<tr>
 				<td><spring:message code="goal.text"/></td>
 				<td><form:input path="minutes" /></td>
+				<td>
+				   <form:select id="activities" path="activity"></form:select>
+				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td colspan="3">
 				    <input type="submit" value="<spring:message code="enter"/>"/>
 				</td>
 			</tr>

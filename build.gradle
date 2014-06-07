@@ -27,13 +27,17 @@ dependencies {
 	       ['javax.validation:validation-api:1.0.0.GA'],
 	       ['junit:junit:3.8.1'],
 	       ['javax.servlet:servlet-api:2.5'],
-	       ['javax.servlet:jstl:1.2']  
+	       ['javax.servlet:jstl:1.2'],
+	       ['org.codehaus.jackson:jackson-mapper-asl:1.9.13'],
+	       ['com.thoughtworks.xstream:xstream:1.4.7'],
+	       ['org.springframework:spring-oxm:3.0.0.RELEASE']       
           )
           
   runtime (
            ['org.springframework.webflow:spring-webflow:2.3.2.RELEASE'],
-	       ['javax.servlet:jstl:1.2']  
+	       ['javax.servlet:jstl:1.2'],
+	       ['org.springframework:spring-oxm:3.0.0.RELEASE']       
           )
 }
 
-defaultTasks 'eclipse','clean','deployeToTomcat'
+defaultTasks 'clean','deployeToTomcat'

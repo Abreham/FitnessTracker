@@ -24,6 +24,4 @@ public class HelloController {
 		
 		return DEFAULT_VIEW;
 	}
-	
-	
 }

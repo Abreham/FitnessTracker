@@ -8,7 +8,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/config/servlet-config.xml</param-value>
+			<param-value>classpath:config/application-config.xml</param-value>
 		</init-param>
 	</servlet>
 	
@@ -21,6 +21,17 @@
 	<servlet-mapping>
 		<servlet-name>fitTrackerServlet</servlet-name>
 		<url-pattern>/pdfs/*pdf</url-pattern>	
+	</servlet-mapping>
+	
+	
+	<servlet-mapping>
+		<servlet-name>fitTrackerServlet</servlet-name>
+		<url-pattern>*.json</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>fitTrackerServlet</servlet-name>
+		<url-pattern>*.xml</url-pattern>	
 	</servlet-mapping>
 
 	<display-name>Archetype Created Web Application</display-name>

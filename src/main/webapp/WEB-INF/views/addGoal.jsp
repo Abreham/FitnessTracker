@@ -11,7 +11,6 @@
 <title>Add Goal</title>
    <link href="<c:url value="/stylesheets/style.css" />" rel="stylesheet">
    <script src="<c:url value="/js/jquery-2.1.1.js" />"></script>
-   <script src="<c:url value="/js/main.js" />"></script>
 </head>
 <body>
   <form:form commandName="goal">
